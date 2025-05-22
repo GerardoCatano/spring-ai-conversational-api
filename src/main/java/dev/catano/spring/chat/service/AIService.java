@@ -5,8 +5,8 @@ import dev.catano.spring.chat.model.Question;
 
 public interface AIService {
 	
-	String getAnswer (String question);
+	String getAnswer (String conversationId, String question);
 
-	Answer getAnswer (Question question);
+	Answer getAnswer (String conversationId, Question question);
 
 }
