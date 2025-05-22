@@ -35,8 +35,8 @@ public class OpenAIService implements AIService {
 		ChatResponse chatResponse = call.chatResponse();
 
 		String answer = chatResponse.getResult().getOutput().getText();
-		log.info(">>>>> SW-chat GET: request: {} <<<<<", question);
-		log.info(">>>>> SW-chat GET: response: {} <<<<<", answer);
+		log.info(">>>>> SW-chat GET method: request: {} <<<<<", question);
+		log.info(">>>>> SW-chat GET method: response: {} <<<<<", answer);
 		return answer;
 	}
 
@@ -49,8 +49,8 @@ public class OpenAIService implements AIService {
 		ChatResponse chatResponse = call.chatResponse();
 
 		Answer answer = new Answer(chatResponse.getResult().getOutput().getText());
-		log.info(">>>>> SW-chat POST: question: {} <<<<<", question.question());
-		log.info(">>>>> SW-chat POST: answer: {} <<<<<", answer.answer());
+		log.info(">>>>> SW-chat POST method: question: {} <<<<<", question.question());
+		log.info(">>>>> SW-chat POST method: answer: {} <<<<<", answer.answer());
 		return answer;
 	}
 
